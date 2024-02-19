@@ -1,0 +1,9 @@
+import pandas as pd
+
+def count_trees(forest):
+    return pd.Series(forest).value_counts().to_dict()
+
+# Example usage:
+forest = ["oak", "pine", "oak", "maple", "birch", "oak"]
+tree_counts = count_trees(forest)
+print("Tree counts in the forest:", tree_counts)
